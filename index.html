@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div data-selected-player class="selected-player-container">
+        <div class="selected-player-area">
+            <h1>Selecione seu player:</h1>
+            <button data-player-button="X">Começar com: X</button>
+            <button data-player-button="O">Começar com: O</button>
+        </div>
+    </div>
+    <div data-versus-area class="selected-versus-container">
+        <div class="selected-player-area">
+            <h1>Jogar contra:</h1>
+            <button data-versus-button="player">Player</button>
+            <button data-versus-button="ia">IA</button>
+        </div>
+    </div>
+    <div class="game-area" data-game-area>
+        <h1>Jogo da velha</h1>
+        <p class="score-title">Placar</p>
+        <div class="score-container">
+            <div class="point-container">
+                <p data-x-score>X: 0</p>
+            </div>
+            <div class="point-container">
+                <p data-circle-score>O: 0</p>
+            </div>
+        </div>
+        <div class="actual-player">
+            <h1 data-player>---</h1>
+        </div>
+        <div class="cell-area">
+            <div data-cell class="cell"></div>
+            <div data-cell class="cell"></div>
+            <div data-cell class="cell"></div>
+            <div data-cell class="cell"></div>
+            <div data-cell class="cell"></div>
+            <div data-cell class="cell"></div>
+            <div data-cell class="cell"></div>
+            <div data-cell class="cell"></div>
+            <div data-cell class="cell"></div>
+        </div>
+        <button data-play-again-button class="restart-button">Jogar novamente</button>
+        <button data-restart-button class="restart-button">Reiniciar jogo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
