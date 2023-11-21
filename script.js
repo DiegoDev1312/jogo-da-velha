@@ -35,32 +35,12 @@ const winningCodition = [
 
 // função para tratar quando for jogar outra partida.
 function handlePlayAgain() {
-    state.values.initialPlayer = state.values.initialPlayer === 'X' ? 'O' : 'X';
-    state.values.countGames++;
-    const coditionChangePlayer = state.values.countGames % 2 === 0;
-    textByType(`Vez do ➙ ${state.values.initialPlayer}`);
-
+    state.values.initialPlayer = 'X';
     for (const cell of allCells) {
         cell.innerHTML = '';
         cell.style.backgroundColor = 'transparent';
-        if (state.values.iaPlayer) {
-            setTimeout(() => {
-                if (state.values.iaPlayer) {
-                    cell.style.pointerEvents = 'all';
-                }
-            }, 2000);
-        } else {
-            cell.style.pointerEvents = 'all';
-        }
+        cell.style.pointerEvents = 'all';
     }
-
-    setTimeout(() => {
-        if (state.values.iaPlayer) {
-            if (coditionChangePlayer) {
-                handlePlayIa();
-            }
-        }
-    }, 250);
 }
 
 function handleRestart() {
@@ -88,7 +68,6 @@ function selectedPlayerOption() {
                 versusArea.style.display = 'none';
                 gameArea.style.display = 'flex';
             }
-
             startGame();
         });
     }
@@ -263,7 +242,7 @@ function findBestMove() {
 }
 
 // função executada quando é a vez da IA
-function handlePlayIa() {
+function handlePlayIa(initGame) {
     const bestMoveCell = findBestMove();
 
     if (bestMoveCell) {
