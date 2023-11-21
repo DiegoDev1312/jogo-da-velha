@@ -8,7 +8,7 @@ Jogo baseado no famoso "jogo da velha".
     <li>Opções de jogar contra IA ou Player</li>
 </ul>
 
-Nas funcionalidades de IA adicionei, fiz baseando-me no algoritmo de busca minmax. Ficou bem interessante o resultado do jogo!
+Na funcionalidade de IA, fiz baseando-me no algoritmo de busca minmax. Ficou bem interessante o resultado do jogo!
 
 Tenham um bom jogo! :)
 
