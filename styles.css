@@ -161,3 +161,11 @@ body {
     border: 1px solid #CCC;
     color: #FFF;
 }
+
+@media (max-width: 350px) {
+    .cell {
+        height: 50px;
+        width: 50px;
+        font-size: 3rem;
+    }
+}
