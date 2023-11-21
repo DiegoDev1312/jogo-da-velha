@@ -168,4 +168,8 @@ body {
         width: 50px;
         font-size: 3rem;
     }
+
+    .selected-player-area {
+        width: 200px;
+    }
 }
